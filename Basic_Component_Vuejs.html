@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Component Vue js</title>
+</head>
+<body>
+    <div id="app" v-if="status == 'tampilkan' ">
+        {{ message }}  <br> <br>
+        <label v-for="user in users"> Nama {{user.nama }}, Umur {{user.umur}} <br></label>
+      </div>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script type="text/javascript">
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    status : 'tampilkan',
+    users : [
+        {
+            nama : 'Adit',
+            umur : '17'
+        },
+        {
+            nama : 'Rizky',
+            umur : '18'
+        },
+        {
+            nama : 'Ramadhan',
+            umur : '19'
+        }
+    ]
+  }
+})
+</script>
